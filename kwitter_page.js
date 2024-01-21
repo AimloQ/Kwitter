@@ -1,3 +1,5 @@
+user_name = localStorage.getItem("user_name");
+room_name = localStorage.getItem("room_name");
 // Your web app's Firebase configuration 
 var firebaseConfig = { 
       apiKey: "AIzaSyCLGpxZs2pD9mqZCrFwuOI0gYPdRWN5Ksw", 
@@ -27,10 +29,6 @@ function getData() { firebase.database().ref("/"+room_name).on('value', function
 //End code//
       } });  }); }
 getData();
-
-user_name = localStorage.getItem("user_name");
-  room_name = localStorage.getItem("room_name");
-
 function sendMsg()
 {
   msg = document.getElementById("msg").value;
